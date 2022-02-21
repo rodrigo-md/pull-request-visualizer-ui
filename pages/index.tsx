@@ -16,7 +16,7 @@ export async function getStaticProps() {
   }
 }
 
-const Home: NextPage = ({created, modified, deleted}: HomeProps ) => {
+const Home: NextPage<HomeProps> = ({created, modified, deleted}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -33,6 +33,14 @@ const Home: NextPage = ({created, modified, deleted}: HomeProps ) => {
           <div>
           <div>Files Created</div>
           {created.map(fileCreated => <div key={fileCreated}>{fileCreated}</div>)}
+          </div>
+          <div>
+          <div>Files Modified</div>
+          {modified.map(fileModified => <div key={fileModified}>{fileModified}</div>)}
+          </div>
+          <div>
+          <div>Files Deleted</div>
+          {deleted.map(fileDeleted => <div key={fileDeleted}>{fileDeleted}</div>)}
           </div>
         </div>
       </main>

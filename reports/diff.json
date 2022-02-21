@@ -1,0 +1,12 @@
+{
+    "created": [
+        "src/index.html",
+        "src/components/App.tsx"
+    ],
+    "modified": [
+        "src/pages/Home.tsx"
+    ],
+    "deleted": [
+        "src/styles/custom.scss"
+    ]
+}
